@@ -1,0 +1,13 @@
+use geobounds;
+
+fn main() {
+    let east = [-2, 5, 1];
+    let north = [4, -1, 3];
+    let result = geobounds_extent(east, north);
+    if len(result) == 0 { println!("invalid"); return; }
+    let mut i = 0;
+    while i < len(result) {
+        println!(at(result, i));
+        i += 1;
+    }
+}
